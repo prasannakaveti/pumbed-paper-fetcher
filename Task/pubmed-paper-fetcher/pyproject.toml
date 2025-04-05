@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pubmed-paper-fetcher"
+version = "0.1.0"
+description = "Fetch PubMed papers with non-academic authors"
+authors = ["prasannakaveti <jayaprasannakaveti5@gmail.com>"]
+packages = [{ include = "pubmed_paper_fetcher" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "*"
+xmltodict = "*"
+beautifulsoup4 = "*"
+click = "*"
+biopython = "^1.85"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_paper_fetcher.main:fetch_papers"
